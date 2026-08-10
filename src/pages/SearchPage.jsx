@@ -45,8 +45,7 @@ export default function SearchPage() {
       <Background />
 
       {/* Content */}
-      <div className="relative z-10 min-h-screen px-6 py-8">
-
+     <div className="relative z-10 min-h-screen overflow-y-auto px-6 py-8">
         {/* Header */}
         <div className="mx-auto max-w-5xl">
 
