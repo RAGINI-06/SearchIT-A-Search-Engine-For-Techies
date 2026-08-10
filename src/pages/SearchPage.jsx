@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+
 import Background from "../components/Background";
 import SearchBar from "../components/SearchBar";
 import SearchResults from "../components/SearchResults";
@@ -8,11 +10,16 @@ export default function SearchPage() {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const params = new URLSearchParams(window.location.search);
+  const location = useLocation();
+
+  const params = new URLSearchParams(location.search);
   const keyword = params.get("q") || "";
 
   useEffect(() => {
-    if (!keyword) return;
+    if (!keyword) {
+      setResults([]);
+      return;
+    }
 
     const fetchResults = async () => {
       setLoading(true);

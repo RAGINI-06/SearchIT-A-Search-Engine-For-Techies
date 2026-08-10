@@ -208,21 +208,22 @@ export default function SearchBar() {
 
       {/* Suggestions Dropdown */}
       {showSuggestions && suggestions.length > 0 && (
-        <div
-          className="
-            absolute
-            left-0
-            right-0
-            top-full
-            z-50
-            mt-1
-            overflow-hidden
-            border
-            border-slate-700
-            bg-slate-900
-            shadow-2xl
-          "
-        >
+       <div
+  className="
+    absolute
+    left-0
+    right-0
+    top-full
+    z-50
+    mt-1
+    max-h-80
+    overflow-y-auto
+    border
+    border-slate-700
+    bg-slate-900
+    shadow-2xl
+  "
+>
           {suggestions.map((suggestion, index) => (
             <button
               key={`${suggestion}-${index}`}
