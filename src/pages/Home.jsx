@@ -18,7 +18,7 @@ export default function Home() {
         </h1>
 
         <p className="mt-5 mb-10 text-lg text-slate-300">
-          Search trusted technical documentation instantly
+          Search trusted technical documentation
         </p>
 
         <SearchBar />

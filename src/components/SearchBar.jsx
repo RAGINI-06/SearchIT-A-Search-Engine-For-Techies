@@ -175,7 +175,7 @@ export default function SearchBar() {
               setShowSuggestions(false);
             }, 150);
           }}
-          placeholder="Search Java, Spring Boot, React..."
+          placeholder="Newbie here... don't bully me with your search 😭"
           className="
             min-w-0
             flex-1
